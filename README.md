@@ -19,11 +19,12 @@ Live at: `https://reluctant-coder-oss.github.io/bitcoin-news-blog/`
 - 🔍 **SEO Optimised** – Meta tags, canonical URLs, Open Graph, Twitter Cards, JSON-LD, sitemap.xml, robots.txt
 - 📱 **Mobile Responsive** – Works on all screen sizes
 - ⚡ **Auto-refresh** – Price every 60s, news every 5 minutes
+- ✅ **Coinzilla Verified** – Crypto ad network integrated
 
 ## 💡 How to Monetise
 
-1. **Google AdSense** – Replace `ad-placeholder` divs with your AdSense code
-2. **Coinzilla / Bitmedia** – Crypto-specific ad networks (higher CPMs)
+1. **Coinzilla / Bitmedia** – Crypto-specific ad networks (higher CPMs for crypto audiences)
+2. **Google AdSense** – Replace `ad-placeholder` divs with your AdSense code
 3. **Affiliate Links** – Add Kraken, Ledger, or Binance affiliate banners
 4. **Sponsored Posts** – Sell article placements via direct outreach
 
