@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bitcoin Analysis & Opinion | BitcoinPulse</title>
+  <meta name="description" content="In-depth Bitcoin market analysis, price predictions and expert commentary on BTC trends." />
+  <link rel="canonical" href="https://reluctant-coder-oss.github.io/bitcoin-news-blog/analysis.html" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Space+Grotesk:wght@700&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo"><span class="logo-icon">₿</span><span>BitcoinPulse</span></a>
+      <nav class="main-nav">
+        <a href="index.html">Home</a>
+        <a href="markets.html">Markets</a>
+        <a href="analysis.html">Analysis</a>
+        <a href="about.html">About</a>
+      </nav>
+    </div>
+  </header>
+  <div class="ad-banner ad-top"><div class="container"><div class="ad-placeholder">📢 Advertisement – 728×90</div></div></div>
+  <main class="container" style="padding:2rem 1rem; max-width:900px">
+    <h1 class="section-title">Bitcoin Analysis</h1>
+    <p style="color:#94a3b8; margin-bottom:2rem;">Expert market commentary and in-depth analysis on Bitcoin price action, macro factors, and on-chain data.</p>
+    <div class="news-grid" id="analysisGrid"></div>
+  </main>
+  <footer class="site-footer"><p class="footer-copy">&copy; 2026 BitcoinPulse. All rights reserved.</p></footer>
+  <script>
+    document.addEventListener('DOMContentLoaded', async () => {
+      try {
+        const res = await fetch('https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fcointelegraph.com%2Frss%2Ftag%2Fbitcoin');
+        const data = await res.json();
+        const grid = document.getElementById('analysisGrid');
+        (data.items || []).slice(0,9).forEach(article => {
+          const img = article.thumbnail && article.thumbnail.length > 10 ? article.thumbnail : 'https://placehold.co/400x200/131720/f7931a?text=Analysis';
+          const date = new Date(article.pubDate).toLocaleDateString('en-GB',{day:'numeric',month:'short',year:'numeric'});
+          grid.innerHTML += `<div class="news-card"><a href="${article.link}" target="_blank" rel="noopener noreferrer nofollow" class="card-link"><img src="${img}" alt="" loading="lazy" onerror="this.src='https://placehold.co/400x200/131720/f7931a?text=Analysis'" /><div class="card-body"><span class="card-tag">Analysis</span><h2 class="card-title">${article.title}</h2><p class="card-desc">${(article.description||'').replace(/<[^>]+>/g,'').slice(0,120)}...</p><div class="card-meta"><span>CoinTelegraph</span><span>${date}</span></div></div></a></div>`;
+        });
+      } catch(e) { document.getElementById('analysisGrid').innerHTML = '<p style="color:#64748b">Could not load analysis articles.</p>'; }
+    });
+  </script>
+</body>
+</html>

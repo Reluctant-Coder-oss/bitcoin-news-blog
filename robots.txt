@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://reluctant-coder-oss.github.io/bitcoin-news-blog/sitemap.xml

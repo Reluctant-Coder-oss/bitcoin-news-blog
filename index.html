@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BitcoinPulse – Latest Bitcoin & Crypto News</title>
+  <meta name="description" content="BitcoinPulse delivers the latest Bitcoin and cryptocurrency news, price analysis, and market updates. Stay ahead of the crypto market." />
+  <meta name="keywords" content="Bitcoin news, crypto news, BTC price, cryptocurrency, blockchain, Bitcoin today" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://reluctant-coder-oss.github.io/bitcoin-news-blog/" />
+
+  <!-- Open Graph / Social -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="BitcoinPulse – Latest Bitcoin & Crypto News" />
+  <meta property="og:description" content="Real-time Bitcoin news, price analysis, and crypto market updates." />
+  <meta property="og:url" content="https://reluctant-coder-oss.github.io/bitcoin-news-blog/" />
+  <meta property="og:image" content="https://reluctant-coder-oss.github.io/bitcoin-news-blog/assets/og-image.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="BitcoinPulse – Latest Bitcoin & Crypto News" />
+  <meta name="twitter:description" content="Real-time Bitcoin news, price analysis, and crypto market updates." />
+
+  <!-- Structured Data (JSON-LD) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "NewsMediaOrganization",
+    "name": "BitcoinPulse",
+    "url": "https://reluctant-coder-oss.github.io/bitcoin-news-blog/",
+    "description": "Latest Bitcoin and cryptocurrency news, analysis and market data.",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://reluctant-coder-oss.github.io/bitcoin-news-blog/assets/logo.png"
+    }
+  }
+  </script>
+
+  <link rel="sitemap" type="application/xml" href="/bitcoin-news-blog/sitemap.xml" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Space+Grotesk:wght@700&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- ===== HEADER ===== -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">
+        <span class="logo-icon">₿</span>
+        <span>BitcoinPulse</span>
+      </a>
+      <nav class="main-nav">
+        <a href="index.html">Home</a>
+        <a href="markets.html">Markets</a>
+        <a href="analysis.html">Analysis</a>
+        <a href="about.html">About</a>
+      </nav>
+      <div class="btc-ticker" id="btcTicker">BTC: Loading...</div>
+    </div>
+  </header>
+
+  <!-- ===== TOP AD BANNER ===== -->
+  <div class="ad-banner ad-top">
+    <div class="container">
+      <!-- Replace with Google AdSense or Media.net code -->
+      <!-- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+           <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-XXXXXXXX" data-ad-slot="XXXXXXXX" data-ad-format="auto"></ins>
+           <script>(adsbygoogle = window.adsbygoogle || []).push({});</script> -->
+      <div class="ad-placeholder">📢 Advertisement – 728×90 Leaderboard</div>
+    </div>
+  </div>
+
+  <!-- ===== BREAKING NEWS TICKER ===== -->
+  <div class="breaking-bar">
+    <div class="container">
+      <span class="breaking-label">LIVE</span>
+      <div class="ticker-wrap">
+        <div class="ticker" id="newsTicker">Loading latest headlines...</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== MAIN LAYOUT ===== -->
+  <main class="container main-grid">
+
+    <!-- LEFT: News Feed -->
+    <section class="news-feed">
+      <h1 class="section-title">Latest Bitcoin News</h1>
+      <div id="newsGrid" class="news-grid">
+        <div class="skeleton"></div>
+        <div class="skeleton"></div>
+        <div class="skeleton"></div>
+        <div class="skeleton"></div>
+        <div class="skeleton"></div>
+        <div class="skeleton"></div>
+      </div>
+      <button class="load-more" id="loadMoreBtn">Load More Stories</button>
+    </section>
+
+    <!-- RIGHT: Sidebar -->
+    <aside class="sidebar">
+
+      <!-- BTC Price Widget -->
+      <div class="widget price-widget">
+        <h3>BTC Price</h3>
+        <div id="priceDisplay" class="price-display">Loading...</div>
+        <div id="priceChange" class="price-change"></div>
+        <canvas id="miniChart" width="240" height="80"></canvas>
+      </div>
+
+      <!-- Sidebar Ad -->
+      <div class="ad-placeholder ad-sidebar">📢 Ad – 300×250</div>
+
+      <!-- Trending -->
+      <div class="widget">
+        <h3>Trending Now</h3>
+        <ul id="trendingList" class="trending-list"><li>Loading...</li></ul>
+      </div>
+
+      <!-- Newsletter -->
+      <div class="widget newsletter-widget">
+        <h3>📬 Daily Digest</h3>
+        <p>Get the top Bitcoin stories delivered free every morning.</p>
+        <form id="newsletterForm" class="newsletter-form">
+          <input type="email" placeholder="your@email.com" required />
+          <button type="submit">Subscribe</button>
+        </form>
+      </div>
+
+      <!-- Sidebar Ad 2 -->
+      <div class="ad-placeholder ad-sidebar">📢 Ad – 300×600</div>
+
+    </aside>
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>
+        <p class="footer-logo">₿ BitcoinPulse</p>
+        <p>Your source for real-time Bitcoin & crypto news.</p>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="markets.html">Markets</a></li>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="sitemap.xml">Sitemap</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Disclaimer</h4>
+        <p>Content is for informational purposes only. Not financial advice.</p>
+      </div>
+    </div>
+    <p class="footer-copy">&copy; 2026 BitcoinPulse. All rights reserved.</p>
+  </footer>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
