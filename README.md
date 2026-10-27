@@ -6,7 +6,7 @@ A fully SEO-optimised, ad-ready Bitcoin news website that auto-cycles live stori
 
 Deploy via **GitHub Pages**: Go to `Settings → Pages → Source: main branch / root`
 
-Live at: `https://reluctant-coder-oss.github.io/bitcoin-news-blog/`
+Live at: `https://bitcoinpulse.co.uk/`
 
 ## ✨ Features
 
